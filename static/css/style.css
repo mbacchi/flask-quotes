@@ -1,0 +1,21 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  color: #b3cce6;
+  font-family: 'Open Sans', sans-serif;
+}
+.title {
+  text-align: center;
+  margin: 2rem auto 3rem;
+}
+.quote-box {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  margin: auto;
+  padding: 2rem;
+  max-width: 50rem;
+}
+#quote-text {
+  font-size: 3rem;
+}

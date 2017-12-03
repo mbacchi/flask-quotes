@@ -1,0 +1,36 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/quote.js') }}"></script>
+    <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    <script>
+        function newQuote() {
+        $(document).ready(function() {
+            $.getJSON('/new_quote',
+                function (data) {
+                    $("#quote-text").text(data);
+                });
+            return false;
+        });
+    }
+    </script>
+    <title>Random Computer Quote Generator</title>
+</head>
+<body>
+    <div class="container">
+      <div class="title">
+        <h1>Random Computer Quote Generator</h1>
+      </div>
+        <div class="quote-box">
+
+        <blockquote id="quote-text">{{ item }}</blockquote>
+
+        </div>
+        <div class="quote-buttons">
+            <button type="button" onClick="newQuote();" class="btn btn-primary" id="new-quote">New Quote</button>
+
+        </div>
+    </div>
+
+</body>
+</html>
