@@ -1,6 +1,6 @@
 function newQuote() {
     $(document).ready(function() {
-        $.getJSON('/new_quote',
+        $.getJSON('https://qlyaou0kc3.execute-api.us-east-1.amazonaws.com/dev/new_quote',
             function (data) {
                 $("#quote-text").text(data);
             });
